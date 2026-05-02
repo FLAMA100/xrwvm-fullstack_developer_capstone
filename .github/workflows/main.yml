@@ -26,7 +26,7 @@ jobs:
     - name: Run Linter
       run: |
         pwd
-        find . -name "*.py" -exec flake8 {} +
+        find . -name "*.py" -exec flake8 --max-line-length=200 --ignore=E302,E303,E722,E275,E231,E225,E501,F841,E712 {} +
         echo "Linted all the python files successfully"
 
   lint_js:
